@@ -81,8 +81,9 @@ h1,h2,h3,h4,h5,h6
 .btn-primary
 {
 	color:#fff;
-	background-color:#fed136;
-	border-color:#fed136;
+	/*background-color:#fed136;*/
+	/*border-color:#fed136;*/
+	background-color:#73bdc2;
 	font-family: 'Lato', sans-serif;
 	text-transform:uppercase;
 	font-weight:700
@@ -91,7 +92,8 @@ h1,h2,h3,h4,h5,h6
 .btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary
 {
 	color:#fff;
-	background-color:#fec503;
+	/*background-color:#fec503;*/
+	background-color:#73bdc2;
 	border-color:#f6bf01
 }
 
@@ -174,8 +176,9 @@ h1,h2,h3,h4,h5,h6
 
 .navbar-default .navbar-toggle
 {
-	background-color:#fed136;
-	border-color:#fed136
+	/*background-color:#fed136;*/
+	/*border-color:#fed136*/
+	background-color:#73bdc2;
 }
 
 .navbar-default .navbar-toggle .icon-bar
@@ -185,7 +188,8 @@ h1,h2,h3,h4,h5,h6
 
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus
 {
-	background-color:#fed136
+	/*background-color:#fed136*/
+	background-color:#73bdc2
 }
 
 .navbar-default .nav li a
@@ -209,13 +213,15 @@ h1,h2,h3,h4,h5,h6
 {
 	border-radius:0;
 	color:#fff;
-	background-color:#fed136
+	/*background-color:#fed136*/
+	background-color:#73bdc2
 }
 
 .navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus
 {
 	color:#fff;
-	background-color:#fec503
+	/*background-color:#fec503*/
+	background-color:#73bdc2;
 }
 
 @media (min-width:768px) {
