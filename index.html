@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Adversarial Machine Learning Workshop at ICML 2021">
+    <meta name="description" content="Pre-training Workshop at ICML 2022">
 
 
-    <title> Adversarial Machine Learning Workshop </title>
+    <title>Pre-training: Perspectives, Pitfalls, and Paths Forward </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,18 +18,17 @@
     <link href="css/agency.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
         type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet" type="text/css">
 
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -43,31 +42,24 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <!-- </div>
-            <a class=" nav navbar-nav navbar-middle " href="#" style='padding-left: 0px; '>AdvML @ ICML 2021
-            </a> -->
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--<ul class="nav navbar-nav navbar-middle">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+
+                    </ul>-->
                     <ul class="nav navbar-nav navbar-middle">
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
 
                         <li>
-                            <a class="page-scroll" href="#" style='padding-left: 0px;'>AdvML @ ICML 2021 </a>
+                            <a class="page-scroll" href="#" style='padding-left: 0px; font-size:22px;'>ICML Pre-training Workshop 2022</a>
                         </li>
-
-                    </ul>
-                    <ul class="nav navbar-nav navbar-middle">
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-
-                        <!-- <li>
-                            <a class="page-scroll" href="#" style='padding-left: 0px;'>AdvML @ ICML 2021 </a>
-                        </li> -->
                         <li>
-                            <a style='padding-left: 163px;'></a>
+                            <a style='padding-left: 120px;'></a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#introduction">Overview</a>
@@ -95,9 +87,9 @@
                             <a class="page-scroll" href="#organization">Organizers</a>
                         </li>
                         <li>
-                        <li>
+                        <!--<li>
                             <a class="page-scroll" href="#contactt">Contact</a>
-                        </li>
+                        </li>-->
                         <li>
 
                             <!-- <li>
@@ -115,7 +107,7 @@
     <header>
         <style>
             header {
-                background-image: url(img/bjj.png);
+                background-image: url(img/bggg.jpg);
                 color: #fff
             }
         </style>
@@ -124,12 +116,15 @@
             
            
             <div class="intro-text">
-                <div class="intro-heading"> A Blessing in Disguise: The Prospects and Perils of Adversarial Machine
-                    Learning</div>
+                <div class="intro-lead-in">ICML 2022 Workshop on</div>
+                </br>
+                <div class="intro-heading">Pre-training: Perspectives, Pitfalls, and Paths Forward</div>
                 </br>
             </br>
 
-                <div class="intro-lead-in"> Workshop at ICML 2021 </br>July 24, 2021</div>
+                <div class="intro-lead-in">Friday, July 22, 2022</div>
+                </br>
+                <div class="intro-lead-in">The workshop will be held in a hybrid format.</div>
                 <!-- <div class="intro-lead-in"> Time Series Workshop @ <a href="https://icml.cc/Conferences/2019"
                         target=_blank>ICML 2019</a></br>June 14, 2019. Long Beach, USA</div> -->
                 <!--a href="#call" target=_blank class="page-scroll btn btn-xl">Submit a Paper</a-->
@@ -150,59 +145,17 @@
             <div class="row text-justify">
                 <div class="col-md-12">
                     <p class="large text-muted">
-                        Adversarial machine learning is a new gamut of technologies that aim to study vulnerabilities of
-                        ML approaches and detect the malicious behaviors in adversarial settings. The adversarial agents
-                        can deceive an ML classifier by significantly altering its response with imperceptible
-                        perturbations to the inputs. Although it is not to be alarmist, researchers in machine learning
-                        have a responsibility to preempt attacks and build safeguards especially when the task is
-                        critical for information security, and human lives. We need to deepen our understanding of
-                        machine learning in adversarial environments.
+                        The past five years have seen rapid progress in large-scale pre-trained models across a variety of domains, such as computer vision, natural language processing, robotics, bioinformatics, etc. Leveraging a huge number of parameters, large-scale pre-trained models are capable of encoding rich knowledge from labeled and/or unlabeled examples. Supervised and self-supervised pre-training have been the two most representative paradigms, through which pre-trained models have demonstrated large benefits on a wide spectrum of downstream tasks. For example, convolutional neural networks pre-trained on a large-scale labeled image dataset (e.g., ImageNet) and later fine-tuned on specific vision tasks with a relative small training set are highly successful. By resorting to carefully designed self-supervised tasks, self-supervised pre-trained models (e.g., BYOL and BERT) enjoy impressive generalization and applicability. There are also other pre-training paradigms, e.g., meta-learning for few-shot learning, where pre-trained models are trained so that they quickly adapt to solve new tasks.
                     </p></br>
 
-                    <p class="large text-muted"> While the negative implications of this nascent technology have been
-                        widely discussed, researchers in machine learning are yet to explore their positive
-                        opportunities in numerous aspects. The positive impacts of adversarial machine learning are not
-                        limited to boost the robustness of ML models, but cut across several other domains including
-                        privacy protection, reliability and safety test, model understanding, improving generalization
-                        performance on different tasks, etc.
+                    <p class="large text-muted">
+                        However, there are still many remaining challenges and new opportunities ahead for pre-training, In this workshop, we propose to have the following two foci, informed by recent advancement in pre-training.
                     </p></br>
 
-                    <!-- <p class="large text-muted">(1) Privacy Protection: Privacy concerns in social media have recently
-                        been under the spotlight, due to a few incidents on user data leakage on social networking
-                        platforms. Classical obfuscation techniques such as face blurring may not be effective against
-                        the CNN-based recognizers, while adversarial examples provide a promising way to protect their
-                        content from unwanted inferences.
-                    </p> </br>
-                    <p class="large text-muted">(2) Reliability and Safety Test: Reliability tests are critical to the
-                        development and deployment for numerous smart devices. The prevailing approaches may be
-                        intolerable inefficiency due to the high dimensionality of the environment and the rareness of
-                        safety-critical events. Recent research demonstrates that it is possible to accelerate the
-                        evaluation process by multiple orders of magnitude with the aid of the sparse but adversarial
-                        adjustments to the naturalistic environments.
-                    </p></br>
-                    <p class="large text-muted">(3) Model Understanding: Understanding what an ML model learns is
-                        important for users to clearly understand, appropriately trust, and effectively interact with
-                        the model. Adversarial ML provides a new perspective to help us understand a model theoretically
-                        and empirically. Recent researches reveal a close connection between adversarial vulnerability
-                        and model interpretability. Adversarially robust models can also lead to more reasonable
-                        interpretability for middle layers, attention operations, etc.
-                    </p></br>
-                    <p class="large text-muted">(4) Generalization: Except for promoting model robustness, adversarial
-                        training methods can also improve the generalization performance for traditional tasks in
-                        computer vision (e.g., image classification) and natural language processing (e.g., language
-                        understanding). These methods are also effective under various learning scenarios, including
-                        semi-supervised learning, transfer learning, etc. It may also be promising for generative
-                        modeling or reinforcement learning if investigated deeply in the future.
-                    </p></br> -->
-                    <p class="large text-muted">Since there are both positive and negative applications of adversarial
-                        machine learning, tackling adversarial learning to their use in the right direction requires a
-                        framework to embrace the positives. This workshop aims to bring together researchers and
-                        practitioners from a variety of communities (e.g., machine learning, computer security, data
-                        privacy and ethics) in an effort to synthesize promising ideas and research directions, as well
-                        as foster and strengthen cross-community collaborations on both theoretical studies and
-                        practical applications. Different from the previous workshops on adversarial machine learning,
-                        our proposed workshop seeks to explore the prospects besides reducing the unintended risks for
-                        sophisticated ML models.
+                    <ul class="large text-muted", style="float:left; width: 100%"> 
+                    <li> Which pre-training methods transfer across different applications/domains, which ones don’t, and why? This question is highly relevant to the reliability of different pre-trained models. We are particularly interested in bringing together various domains of researchers that work on different kinds of pre-trained models to discuss the pitfalls of pre-trained models as well as present both empirical and theoretical explanations.</li>
+                    <li> In what settings should we expect pre-training to be effective, compared to learning from scratch? In many domains, such as medical image analysis, the benefits of popular pre-trained models have been shown to diminish because the data are fairly fine-grained. To this end, we aim to invite researchers from different areas to discuss which aspects of pre-training (e.g., labeled/unlabeled data size, architecture) account for such performance difference and how to maximize the power of pre-training in various fields. Both theoretical and empirical contributions are expected.</li>
+                    </ul></br>
                     </p></br>
                 </div>
             </div>
@@ -223,90 +176,26 @@
 
 
                             <p class="large text-muted">
-                                We welcome submission from different aspects of adversarial ML, including but not
-                                limited to
+                                We welcome submissions from areas of meta-learning, few-shot learning, transfer learning, self-supervised learning, deep learning theory, etc. We also invite submissions from researchers in other application areas such as physics, chemistry, biology. To summarize, the topics include but are not limited to:
                             </p>
 
                             <ul class="large text-muted" style="float:left; width: 100%">
-                                <li> Adversarial / poisoned attacks against ML models</li>
-                                <li> Adversarial defenses to improve decision robustness</li>
-                                <li> Methods of detecting / rejecting adversarial examples</li>
-                                <li> Model verification and certified training / inference</li>
-                                <li> Benchmarks to reliably evaluate previous defenses</li>
-                                <li> Theoretical understanding of adversarial ML</li>
-                                <li> Empirical studies that help to construct practically robust systems</li>
-                                <li> Adversarial ML in the real world</li>
-                                <li> Robust model architectures, data augmentations, and dataset biases </li>
-                                <li> Positive applications of the techniques in adversarial ML (e.g., privacy protection, generalization improvement,
-                                    interpretable ML, transfer learning, reinforcement learning, traditional CV and
-                                    NLP tasks)</li>
+                                <li> Theoretical foundations of connections and differences between different pre-training methods (supervised pre-training, self-supervised pre-training with different auxiliary tasks, meta-learning, etc.)</li>
+                                <li> Empirical analysis of various pre-training methods</li>
+                                <li> Generalization bounds of different pre-training methods</li>
+                                <li> Novel pre-training methods to maximize generalization</li>
+                                <li> Model selection among a zoo of pre-trained models</li>
+                                <li> New fine-tuning techniques for maximally leveraging a pre-trained model</li>
+                                <li> Pre-training for various application domains, such as computer vision, natural language processing, robotics, physics, drug discovery, and environmental sustainability</li>
                             </ul>
-                            <p class="large text-muted">
-                                We only consider submissions that haven’t been published in any peer-reviewed venue,
-                                including ICML 2021 conference. We welcome submissions that are currently under review in some conferences (e.g., NeurIPS 2021) The workshop is non-archival and will not have any
-                                official proceedings. Based on the PC’s recommendation, the accepted papers will be
-                                allocated either a contributed talk or a poster presentation.
-                            </p>
+                            <p class="large text-muted"><mybold>Submission format:</mybold> &nbsp;&nbsp; TBD</p>
                             </br>
-                            <p class="large text-muted"><b>Submission format:</b> &nbsp;&nbsp;Submissions should be
-                                anonymized
-                                and
-                                follow the  <a href="http://ml.cs.tsinghua.edu.cn/~yinpeng/downloads/advml_icml2021_style.zip">template</a>. Submissions should
-                                be up to 4 pages, plus unlimited space for references and appendices.</p>
-                            </br>
-                            <h4> The list of accepted papers is available at
-                                    <a
-                                        href="https://openreview.net/group?id=ICML.cc/2021/Workshop/AML">https://openreview.net/group?id=ICML.cc/2021/Workshop/AML</a>.
-                                </h4>
-                         
                         </div>
                     </div>
 
                 </div>
     </section>
     
-    
-    <!-- Paper Awards -->
-    <!-- <section id="best" class="bg-mid-gray"> -->
-    <section id="call">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <h2 class="section-heading">Paper Awards</h2>
-
-                    <div class="row text-justify">
-                        <div class="col-md-12">
-                  
-                            <p class="large text-muted">
-                                <b>Best Paper Award:</b> <a
-                                        href="https://openreview.net/forum?id=6pgY2PkoXb0">Detecting Adversarial Examples Is (Nearly) As Hard As Classifying Them</a> by Florian Tramer
-                            </p>
-                            <p class="large text-muted">
-                                <b>Adversarial for Good Award:</b> <a
-                                        href="https://openreview.net/forum?id=g6zfnWUg8A1">Defending against Model Stealing via Verifying Embedded External Features</a> by Linghui Zhu, Yiming Li, Xiaojun Jia, Yong Jiang, Shu-Tao Xia, Xiaochun Cao
-                            </p>
-                            
-                            <p class="large text-muted">
-                                <b>Silver Best Paper Awards (Runner-up):</b>
-                            </p>
-                            <ul class="large text-muted" style="float:left; width: 100%">
-                                <li> <a href="https://openreview.net/forum?id=k7RiU9rY6jK">Adversarial Robustness of Streaming Algorithms through Importance Sampling</a> by Vladimir Braverman, Avinatan Hassidim, Yossi Matias, Mariano Schain, Sandeep Silwal, Samson Zhou</li>
-                                <li> <a href="https://openreview.net/forum?id=U0TCTe68s41">Demystifying Adversarial Training via A Unified Probabilistic Framework</a> by Yifei Wang, Yisen Wang, Jiansheng Yang, Zhouchen Lin</li>
-                                <li> <a href="https://openreview.net/forum?id=g4NNK4RH715">Certified robustness against adversarial patch attacks via randomized cropping</a> by Wan-Yi Lin, Fatemeh Sheikholeslami, jinghao shi, Leslie Rice, J Zico Kolter</li>
-                                <li> <a href="https://openreview.net/forum?id=BuD2LmNaU3a">Helper-based Adversarial Training: Reducing Excessive Margin to Achieve a Better Accuracy vs. Robustness Trade-off</a> by Rahul Rade, Seyed-Mohsen Moosavi-Dezfooli</li>
-                            </ul>
-                            
-                            </br>
-                            <h4>(Those awards are kindly sponsored by <a href="https://real-ai.cn">RealAI</a>)</h4>
-                            </br>
-                    
-                        </div>
-                    </div>
-
-                </div>
-    </section>
-
 
     <!-- Dates Section -->
     <section id="dates">
@@ -325,18 +214,14 @@
                     <div class="col-md-8">
                         <ul style="float:left; width: 100%">
                             <p class="large text-muted">
-                                <b>Submission deadline:</b> (Extended to) June 17th, 2021
+                                <b>Submission deadline:</b> May 5th, 2022
                             </p>
                             <p class="large text-muted">
-                                <b>Notification to authors:</b> June 20th, 2021
+                                <b>Notification to authors:</b> June 6th, 2022
                             </p>
                             <p class="large text-muted">
-                                <b>Video recordings of contributed talks deadline:</b> June 27th, 2021
+                                <b>Final workshop program, camera-ready, video recording deadline:</b> June 17th, 2022
                             </p>
-                            <p class="large text-muted">
-                                <b>Camera-ready deadline:</b> July 1st, 2021
-                            </p>
-
                         </ul>
                     </div>
                 </div>
@@ -358,7 +243,7 @@
                 </div>
             </div>
             <p class="large text-muted">
-            This is the final schedule of the workshop. All slots are provided in Eastern Time (ET). 
+            This is the tentative schedule of the workshop. All slots are provided in Eastern Time (ET). 
             </p>
             <div id="schedule">
                 <div class="container w">
@@ -367,64 +252,9 @@
                         <table class="table table-striped" border="2" cellpadding="2" cellspacing="2">
                             <tbody>
                                 <tr>
-                                    <td>7:45 - 8:00 </td>
-                                    <td>Opening Remarks -- Hang Su </td>
-
+                                    <td>TBD</td>
+                                    <td>TBD </td>
                                 </tr>
-                                <tr>
-                                    <td>8:00 - 8:30 </td>
-                                    <td>Invited Talk #1 -- Liwei Wang ("Towards Certifying $\ell_\infty$ Robustness using Neural Networks with $\ell_\infty$-dist Neurons")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>8:30 - 9:00 </td>
-                                    <td>Invited Talk #2 -- Sven Gowal ("A Perspective on Adversarial Robustness")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>9:00 - 9:05 </td>
-                                    <td>Contributed Talk #1 -- Yiming Li ("Defending against Model Stealing via Verifying External Features")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>9:05 - 9:10 </td>
-                                    <td>Contributed Talk #2 -- Evani Radiya-Dixit ("Data Poisoning Won’t Save You From Facial Recognition")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>9:10 - 9:40 </td>
-                                    <td>Invited Talk #3 -- Matthias Hein ("Adversarial Robustness: Evaluation and Approaches beyond Adversarial Training")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>9:40 - 10:10</td>
-                                    <td>Invited Talk #4 -- Aleksander Madry ("Robustness: Data and Features")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>10:10 - 10:15</td>
-                                    <td>Contributed Talk #3 -- Maura Pintor ("Fast Minimum-norm Adversarial Attacks through Adaptive Norm Constraints")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>10:15 - 10:20</td>
-                                    <td>Contributed Talk #4 -- Florian Tramer ("Detecting Adversarial Examples Is (Nearly) As Hard As Classifying Them")</td>
-
-                                </tr>
-                                <tr>
-                                    <td>10:20 - 10:50 </td>
-                                    <td>Invited Talk #5 -- Jan Hendrik Metzen ("The Adversarial Patch Threat Model")</td>
-                                </tr>
-                                <tr>
-                                    <td>10:50 - 11:30 </td>
-                                    <td>Panel Discussion #1 -- Hang Su, Matthias Hein, Liwei Wang, Sven Gowal, Jan Hendrik Metzen, Henry Liu, Yisen Wang</td>
-                                </tr>
-                                <tr>
-                                    <td>11:30 - 12:30 </td>
-                                    <td>Poster Session #1</td>
-                                </tr>
-
-
                             </tbody>
 
                         </table>
@@ -434,57 +264,8 @@
                         <table class="table table-striped" border="2" cellpadding="2" cellspacing="2">
                             <tbody>
                                 <tr>
-                                    <td>12:30 - 13:00</td>
-                                    <td>Invited Talk #6 -- Henry Liu ("Safety Assessment of Autonomous Vehicles with a Naturalistic and Adversarial Driving Environment")</td>
-                                </tr>
-                                <tr>
-                                    <td>13:00 - 13:30</td>
-                                    <td>Invited Talk #7 -- Nicholas Carlini ("Large Underspecified Models: Less Secure, Less Private")</td>
-                                </tr>
-                                <tr>
-                                    <td>13:30 - 13:35</td>
-                                    <td>Contributed Talk #5 -- Wan-Yi Lin ("Certified robustness against adversarial patch attacks via randomized cropping")</td>
-                                </tr>
-                                <tr>
-                                    <td>13:35 - 13:40</td>
-                                    <td>Contributed Talk #6 -- Jihoon Tack ("Consistency Regularization for Adversarial Robustness")</td>
-                                </tr>
-                                <tr>
-                                    <td>13:40 - 14:10</td>
-                                    <td>Invited Talk #8 -- Andy Banburski ("Biologically-inspired Defenses against Adversarial Attacks")</td>
-                                </tr>
-                                <tr>
-                                    <td>14:10 - 14:40 </td>
-                                    <td>Invited Talk #9 -- Kamalika Chaudhuri ("Adversarial Examples and OOD Generalization")</td>
-                                </tr>
-                                <tr>
-                                    <td>14:40 - 14:45</td>
-                                    <td>Contributed Talk #7 -- Rahul Rade ("Helper-based Adversarial Training: Reducing Excessive Margin to Achieve a Better Accuracy vs. Robustness Trade-off")</td>
-                                </tr>
-                                <tr>
-                                    <td>14:45 - 14:50</td>
-                                    <td>Contributed Talk #8 -- Sandeep Silwal ("Adversarial Robustness of Streaming Algorithms through Importance Sampling")</td>
-                                </tr>
-                                <tr>
-                                    <td>14:50 - 15:20 </td>
-                                    <td>Invited Talk #10 -- Cihang Xie ("Adversarial Examples IMPROVE Image Recognition")</td>
-                                </tr>
-                                <tr>
-                                    <td>15:20 - 15:50 </td>
-                                    <td>Invited Talk #11 -- Will Xiao ("Adversarial Images for the Primate Brain")</td>
-                                </tr>
-                                <tr>
-                                    <td>15:50 - 16:30 </td>
-                                    <td>Panel Discussion #2 -- Bo Li, Nicholas Carlini, Dawn Song, Andy Banburski, Kamalika Chaudhuri, Will Xiao, Cihang Xie</td>
-                                </tr>
-                                <tr>
-                                    <td>16:30 - 16:35</td>
-                                    <td>Contributed Talk #9 -- Keji Han ("Is It Time to Redefine the Classification Task for Deep Learning Systems?")</td>
-                                </tr>
-                                <tr>
-                                    <td>16:35 - 17:35 </td>
-                                    <td>Poster Session #2</td>
-                                    <!-- <td> </td> -->
+                                    <td>TBD</td>
+                                    <td>TBD</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -498,15 +279,6 @@
     </section>
 
     <!-- Speaker Section -->
-
-<!-- *Aleksander Mądry (MIT, https://people.csail.mit.edu/madry/) 
-*Liwei Wang (Peking University, http://www.liweiwang-pku.com)
-*Sven Gowal (DeepMind, https://scholar.google.com/citations?user=7wclGnQAAAAJ&hl=en)
-*Jan Hendrik Metzen (Bosch Center for Artificial Intelligence, https://scholar.google.de/citations?user=w047VfEAAAAJ&hl=en)
-*Nicholas Carlini (Google, https://nicholas.carlini.com) 
-*Will Xiao (Harvard Medical School, https://livingstone.hms.harvard.edu/people/will-xiao)
-*Kamalika Chauduri (UCSD, http://cseweb.ucsd.edu/~kamalika/) -->
-
     <section id="speaker">
         <div class="container">
             <div class="row">
@@ -522,33 +294,33 @@
             <div class="row row-centered ">
                 <div class="col-sm-2">
                     <div class="team-member">
-                        <img src="img/speakers/Aleksander_Madry.png" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://people.csail.mit.edu/madry/">
-                            <h4> Aleksander Mądry</h4>
+                        <img src="img/speakers/Oriol_Vinyals.jpeg" height="150" width="150" class="img-responsive img-circle">
+                        <a href="https://research.google/people/OriolVinyals/">
+                            <h4>Oriol Vinyals</h4>
                         </a>
-                        <p class="text-muted">MIT</p>
+                        <p class="text-muted">Deepmind</p>
                     </div>
                 </div>
 
                 <div class="row row-centered ">
                     <div class="col-sm-2">
                         <div class="team-member">
-                            <img src="img/speakers/Liwei Wang.png" height="150" width="150" class="img-responsive img-circle">
-                            <a href="http://www.liweiwang-pku.com">
-                                <h4> Liwei Wang</h4>
+                            <img src="img/speakers/Hanie_Sedgh.jpeg" height="150" width="150" class="img-responsive img-circle">
+                            <a href="https://haniesedghi.com/">
+                                <h4>Hanie Sedgh</h4>
                             </a>
-                            <p class="text-muted">Peking University</p>
+                            <p class="text-muted">Google Brain</p>
                         </div>
                     </div>
 
                     <div class="row row-centered ">
                         <div class="col-sm-2">
                             <div class="team-member">
-                                <img src="img/speakers/Sven Gowal.jpg" height="150" width="150" class="img-responsive img-circle">
-                                <a href="https://scholar.google.com/citations?user=7wclGnQAAAAJ&hl=en">
-                                    <h4> Sven Gowal</h4>
+                                <img src="img/speakers/Xinlei_Chen.jpeg" height="150" width="150" class="img-responsive img-circle">
+                                <a href="https://xinleic.xyz/">
+                                    <h4>Xinlei Chen</h4>
                                 </a>
-                                <p class="text-muted">DeepMind</p>
+                                <p class="text-muted">Meta AI</p>
                             </div>
                         </div>
 
@@ -557,12 +329,12 @@
                         <div class="row row-centered ">
                             <div class="col-sm-2">
                                 <div class="team-member">
-                                    <img src="img/speakers/Jan Hendrik Metzen.png" height="150" width="150"
+                                    <img src="img/speakers/Mohit_Bansal.png" height="150" width="150"
                                         class="img-responsive img-circle">
-                                    <a href="https://scholar.google.de/citations?user=w047VfEAAAAJ&hl=en">
-                                        <h4> Jan Hendrik Metzen</h4>
+                                    <a href="https://www.cs.unc.edu/~mbansal/">
+                                        <h4>Mohit Bansal</h4>
                                     </a>
-                                    <p class="text-muted">Bosch Center for Artificial Intelligence</p>
+                                    <p class="text-muted">UNC Chapel Hill</p>
                                 </div>
                             </div>
 
@@ -571,12 +343,12 @@
                             <div class="row row-centered ">
                                 <div class="col-sm-2">
                                     <div class="team-member">
-                                        <img src="img/speakers/nicholas Carlini.jpg" height="150" width="150"
+                                        <img src="img/speakers/Connor_W_Coley.jpeg" height="150" width="150"
                                             class="img-responsive img-circle">
-                                        <a href="https://nicholas.carlini.com">
-                                            <h4> Nicholas Carlini</h4>
+                                        <a href="https://coley.mit.edu/">
+                                            <h4>Connor W. Coley</h4>
                                         </a>
-                                        <p class="text-muted">Google</p>
+                                        <p class="text-muted">MIT</p>
                                     </div>
                                 </div>
 
@@ -592,84 +364,43 @@
                                              <div class="row row-centered ">
                                                 <div class="col-sm-2">
                                                     <div class="team-member">
-                                                        <img src="img/speakers/Will Xiao.png" height="150" width="150"
+                                                        <img src="img/speakers/Sara_Beery.jpeg" height="150" width="150"
                                                             class="img-responsive img-circle">
-                                                        <a href="https://livingstone.hms.harvard.edu/people/will-xiao">
-                                                            <h4> Will Xiao</h4>
+                                                        <a href="https://beerys.github.io/">
+                                                            <h4> Sara Beery</h4>
                                                         </a>
-                                                        <p class="text-muted">Harvard Medical School</p>
+                                                        <p class="text-muted">Caltech</p>
                                                     </div>
                                                 </div>
                                                  
                                                     <div class="row row-centered ">
                                                         <div class="col-sm-2">
                                                             <div class="team-member">
-                                                                <img src="img/speakers/Kamalika Chaudhuri.jpg" height="150"
+                                                                <img src="img/speakers/Maithra_Raghu.jpeg" height="150"
                                                                     width="150" class="img-responsive img-circle">
-                                                                <a href=" http://cseweb.ucsd.edu/~kamalika/">
-                                                                    <h4> Kamalika Chauduri</h4>
+                                                                <a href="https://maithraraghu.com/">
+                                                                    <h4>Maithra Raghu</h4>
                                                                 </a>
-                                                                <p class="text-muted">UCSD</p>
+                                                                <p class="text-muted">Google Brain</p>
                                                             </div>
                                                         </div>
                                                         
                                                         <div class="row row-centered ">
                                                             <div class="col-sm-2">
                                                                 <div class="team-member">
-                                                                    <img src="img/speakers/CihangXie.jpeg" height="150" width="150"
+                                                                    <img src="img/speakers/Charles_Sutton.jpeg" height="150" width="150"
                                                                         class="img-responsive img-circle">
-                                                                    <a href="https://cihangxie.github.io/">
-                                                                        <h4> Cihang Xie</h4>
+                                                                    <a href="https://homepages.inf.ed.ac.uk/csutton/">
+                                                                        <h4>Charles Sutton</h4>
                                                                     </a>
-                                                                    <p class="text-muted"> UC Santa Cruz</p>
+                                                                    <p class="text-muted">University of Edinburgh</p>
                                                                 </div>
-                                                            </div>
-                                                            
-                                                            <div class="row row-centered ">
-                                                            <div class="col-sm-2">
-                                                                <div class="team-member">
-                                                                    <img src="img/speakers/andrzej_square.png" height="150" width="150"
-                                                                        class="img-responsive img-circle">
-                                                                    <a href="http://www.andrzejbanburski.com/">
-                                                                        <h4> Andrzej Banburski</h4>
-                                                                    </a>
-                                                                    <p class="text-muted"> MIT</p>
-                                                                </div>
-                                                            </div>
-                                                                
-                                                                <div class="row row-centered ">
-                                                                    <div class="col-sm-2">
-                                                                        <div class="team-member">
-                                                                            <img src="img/speakers/Matthias_Hein.jpeg" height="150" width="150"
-                                                                                class="img-responsive img-circle">
-                                                                            <a href="https://scholar.google.com/citations?hl=en&user=0ZAb3tsAAAAJ">
-                                                                                <h4> Matthias Hein</h4>
-                                                                            </a>
-                                                                            <p class="text-muted">University of Tübingen</p>
-                                                                        </div>
-                                                                    </div>
-                                                                
-                                                                
+                                                            </div>           
                                                     </div>
                                                 </div>
 
     </section>
 
-
-<!-- 
-    Hang Su (Tsinghua University, https://www.suhangss.me/)
-    Yinpeng Dong (Tsinghua University, http://ml.cs.tsinghua.edu.cn/~yinpeng/)
-    Tianyu Pang (Tsinghua University, http://ml.cs.tsinghua.edu.cn/~tianyu/)
-    Eric Wong (MIT, https://riceric22.github.io)
-    Zico Kolter (CMU, https://zicokolter.com)
-    Bo Li (UIUC, https://aisecure.github.io/)
-    Shuo Feng (University of Michigan, https://www.fshuo.tech)
-    Henry Liu (University of Michigan, https://cee.engin.umich.edu/people/henry-liu/)
-    Dan Hendrycks (UC Berkeley, http://danhendrycks.com/)
-    Francesco Croce (University of Tuebingen,
-    uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/maschinelles-lernen/team/francesco-croce-msc/)
-    Leslie Rice (CMU, https://leslierice1.github.io)
-    Tian Tian (RealAI, http://ml.cs.tsinghua.edu.cn/~tian/)) -->
 
     <section id="organization">
         <div class="container">
@@ -685,36 +416,36 @@
             <div class="row row-centered ">
                 <div class="col-sm-2">
                     <div class="team-member">
-                        <img src="img/organizers/hangsu.jpeg" height="150" width="150"
+                        <img src="img/organizers/Huaxiu_Yao.jpg" height="150" width="150"
                             class="img-responsive img-circle">
-                        <a href="https://www.suhangss.me/">
-                            <h4> Hang Su</h4>
+                        <a href="https://huaxiuyao.mystrikingly.com/">
+                            <h4>Huaxiu Yao</h4>
                         </a>
-                        <p class="text-muted">Tsinghua University</p>
+                        <p class="text-muted">Stanford University</p>
                     </div>
                 </div>
 
                 <div class="row row-centered ">
                     <div class="col-sm-2">
                         <div class="team-member">
-                            <img src="img/organizers/yinpeng.jpeg" height="150" width="150"
+                            <img src="img/organizers/Hugo_Larochelle.png" height="150" width="150"
                                 class="img-responsive img-circle">
-                            <a href=" http://ml.cs.tsinghua.edu.cn/~yinpeng/">
-                                <h4> Yinpeng Dong</h4>
+                            <a href="https://mila.quebec/en/person/hugo-larochelle/">
+                                <h4>Hugo Larochelle</h4>
                             </a>
-                            <p class="text-muted">Tsinghua University</p>
+                            <p class="text-muted">Google Brain</p>
                         </div>
                     </div>
 
                     <div class="row row-centered ">
                         <div class="col-sm-2">
                             <div class="team-member">
-                                <img src="img/organizers/Tianyu Pang.jpeg" height="150" width="150"
+                                <img src="img/organizers/Percy_Liang.jpeg" height="150" width="150"
                                     class="img-responsive img-circle">
-                                <a href="http://ml.cs.tsinghua.edu.cn/~tianyu/">
-                                    <h4> Tianyu Pang</h4>
+                                <a href="https://cs.stanford.edu/~pliang/">
+                                    <h4>Percy Liang</h4>
                                 </a>
-                                <p class="text-muted">Tsinghua University</p>
+                                <p class="text-muted">Stanford University</p>
                             </div>
                         </div>
 
@@ -723,12 +454,12 @@
                         <div class="row row-centered ">
                             <div class="col-sm-2">
                                 <div class="team-member">
-                                    <img src="img/organizers/Eric Wong.png" height="150" width="150"
+                                    <img src="img/organizers/Colin_Rafel.jpeg" height="150" width="150"
                                         class="img-responsive img-circle">
-                                    <a href="https://riceric22.github.io">
-                                        <h4> Eric Wong</h4>
+                                    <a href="https://colinraffel.com/">
+                                        <h4>Colin Rafel</h4>
                                     </a>
-                                    <p class="text-muted">MIT</p>
+                                    <p class="text-muted">UNC Chapel Hill</p>
                                 </div>
                             </div>
 
@@ -737,24 +468,12 @@
                             <div class="row row-centered ">
                                 <div class="col-sm-2">
                                     <div class="team-member">
-                                        <img src="img/organizers/zicokolter.jpg" height="150" width="150"
+                                        <img src="img/organizers/Jian_Tang.jpeg" height="150" width="150"
                                             class="img-responsive img-circle">
-                                        <a href="https://zicokolter.com">
-                                            <h4>Zico Kolter</h4>
+                                        <a href="https://jian-tang.com/">
+                                            <h4>Jian Tang</h4>
                                         </a>
-                                        <p class="text-muted">CMU</p>
-                                    </div>
-                                </div>
-                                <div class="row row-centered ">
-                                    <div class="col-sm-2">
-                                        <div class="team-member">
-                                            <img src="img/organizers/bo_li.jpg" height="150" width="150"
-                                                class="img-responsive img-circle">
-                                            <a href="https://aisecure.github.io/">
-                                                <h4> Bo Li</h4>
-                                            </a>
-                                            <p class="text-muted">UIUC</p>
-                                        </div>
+                                        <p class="text-muted">Mila-Quebec AI Institute & HEC Montreal</p>
                                     </div>
                                 </div>
                             </div>
@@ -773,36 +492,36 @@
                                 <div class="row row-centered ">
                                     <div class="col-sm-2">
                                         <div class="team-member">
-                                            <img src="img/organizers/Shuo Feng.jpg" height="150" width="150"
+                                            <img src="img/organizers/Ying_WEI.jpeg" height="150" width="150"
                                                 class="img-responsive img-circle">
-                                            <a href="https://www.fshuo.tech">
-                                                <h4> Shuo Feng</h4>
+                                            <a href="https://wei-ying.net">
+                                                <h4>Ying Wei</h4>
                                             </a>
-                                            <p class="text-muted">University of Michigan</p>
+                                            <p class="text-muted">City University of Hong Kong</p>
                                         </div>
                                     </div>
 
                                     <div class="row row-centered ">
                                         <div class="col-sm-2">
                                             <div class="team-member">
-                                                <img src="img/organizers/Henry Liu.png" height="150" width="150"
+                                                <img src="img/organizers/Saining_Xie.png" height="150" width="150"
                                                     class="img-responsive img-circle">
-                                                <a href="https://cee.engin.umich.edu/people/henry-liu/">
-                                                    <h4> Henry Liu</h4>
+                                                <a href="https://www.sainingxie.com/">
+                                                    <h4>Saining Xie</h4>
                                                 </a>
-                                                <p class="text-muted">University of Michigan</p>
+                                                <p class="text-muted">Meta AI</p>
                                             </div>
                                         </div>
 
                                         <div class="row row-centered ">
                                             <div class="col-sm-2">
                                                 <div class="team-member">
-                                                    <img src="img/organizers/Dan Hendrycks.png" height="150" width="150"
+                                                    <img src="img/organizers/Eric_Xing.jpg" height="150" width="150"
                                                         class="img-responsive img-circle">
-                                                    <a href="http://danhendrycks.com/">
-                                                        <h4> Dan Hendrycks</h4>
+                                                    <a href="http://www.cs.cmu.edu/~epxing/">
+                                                        <h4>Eric P. Xing</h4>
                                                     </a>
-                                                    <p class="text-muted">UC Berkeley</p>
+                                                    <p class="text-muted">MBZUAI & CMU</p>
                                                 </div>
                                             </div>
 
@@ -811,91 +530,55 @@
                                             <div class="row row-centered ">
                                                 <div class="col-sm-2">
                                                     <div class="team-member">
-                                                        <img src="img/organizers/Francesco Croce.jpg" height="150"
+                                                        <img src="img/organizers/Chelsea_Finn.jpeg" height="150"
                                                             width="150" class="img-responsive img-circle">
                                                         <a
-                                                            href="https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/maschinelles-lernen/team/francesco-croce-msc/">
-                                                            <h4> Francesco Croce</h4>
+                                                            href="https://ai.stanford.edu/~cbfinn/">
+                                                            <h4>Chelsea Finn</h4>
                                                         </a>
-                                                        <p class="text-muted">University of Tuebingen</p>
+                                                        <p class="text-muted">Stanford University</p>
                                                     </div>
                                                 </div>
-
-
-
-                                                <div class="row row-centered ">
-                                                    <div class="col-sm-2">
-                                                        <div class="team-member">
-                                                            <img src="img/organizers/Leslie Rice.jpg" height="150"
-                                                                width="150" class="img-responsive img-circle">
-                                                            <a href="https://leslierice1.github.io">
-                                                                <h4> Leslie Rice</h4>
-                                                            </a>
-                                                            <p class="text-muted">CMU</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row row-centered ">
-                                                        <div class="col-sm-2">
-                                                            <div class="team-member">
-                                                                <img src="img/organizers/tian.jpeg" height="150"
-                                                                    width="150" class="img-responsive img-circle">
-                                                                <a href=" http://ml.cs.tsinghua.edu.cn/~tian/">
-                                                                    <h4> Tian Tian</h4>
-                                                                </a>
-                                                                <p class="text-muted">RealAI</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
+
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Program Committee</h2>
+                    <br />
+                    <br />
+                    <br />
+                    TBD
+                </div>
+            </div>
+    </div>
     </section>
 
 
-    <!-- <section id="call">
-        <div class="container">
 
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <h2 class="section-heading">Call for Papers</h2>
-
-                    <div class="row text-justify">
-                        <div class="col-md-12">
-
-
-                            <p class="large text-muted">
-                                We welcome submission from different aspects of adversarial ML, including but not
-                                limited to
-                            </p>
-                        </section> -->
-
-
-    <section id="contactt">
+    <!-- <section id="contactt">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <h2 class="section-heading">Contact</h2>
-                                            <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
+                                            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                                             <p class="large text-muted">
 
-                                                Please contact <a
-                                                    href='mailto:suhangss@mail.tsinghua.edu.cn'>Hang Su</a>,
-                                                <a href="mailto:dyp17@mails.tsinghua.edu.cn">Yinpeng Dong</a>
-                                                , <a href="mailto:pty17@mails.tsinghua.edu.cn">Tianyu Pang</a>&nbsp;if
-                                                you have any
-                                                questions.
+                                                Please contact if you have any questions.
 
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                         </div>
-    </section>
+    </section>-->
 
 
 
 
 
 
-    <section id="contact">
+<!--     <section id="contact">
         <br class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -914,12 +597,12 @@
             </a>
                 
             </center>
-        </div>
+        </div> -->
 
 
 
-        </div>
-    </section>
+        <!-- </div> -->
+    <!-- </section> -->
 
 
 
